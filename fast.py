@@ -112,7 +112,7 @@ class Fast:
     def copy_single_file(self, src, des):
         size = os.path.getsize(src)
         copied = 0
-        with open(src, "rb") as source, open(des, "wb") as dest:
+        with open(src, "rb") as source, open(f"{os.path.join(des, os.path.basename(src))}", "wb") as dest:
             while chunk := source.read(self.buffer_size):
                 copied += len(chunk)
                 dest.write(chunk)
@@ -121,11 +121,7 @@ class Fast:
     def move_single_file(self, src, des):
         size = os.path.getsize(src)
         copied = 0
-        with open(src, "rb") as source, open(des, "wb") as dest:
-            while chunk := source.read(self.buffer_size):
-                copied += len(chunk)
-                dest.write(chunk)
-                printf(f"{int((copied / size) * 100)}%\n", Fore.LIGHTGREEN_EX)
+        self.copy_single_file(src, des)
         os.remove(src)
 
     def get_file_info(self, src):
