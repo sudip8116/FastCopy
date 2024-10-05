@@ -7,7 +7,7 @@
 
 For users who do not want to run the script manually, a pre-built executable is available for download:
 
-[Download Fast.exe](https://github.com/your-username/your-repo-name/raw/main/fast.exe)
+[Download Fast.exe](https://github.com/sudip8116/FastCopy/blob/main/fast.exe)
 
 ## Features
 - **Fast file operations**: Copy, move, or delete multiple files and directories efficiently.
