@@ -12,7 +12,11 @@
 
 ## Installation
 You need to have Python installed on your system. You can download Python from [python.org](https://www.python.org/downloads/).
+## Download the Executable
 
+You can download the executable file for **Fast** here:
+
+[Download Fast.exe](https://github.com/your-username/your-repo-name/raw/main/your-exe-file.exe)
 To install the required dependencies:
 ```bash
 pip install colorama
