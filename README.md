@@ -1,70 +1,71 @@
 
 # Fast File Management Utility
 
-`Fast` is a lightweight Python-based file management tool designed to perform fast copying, moving, and deleting of files and directories, as well as provide detailed file and directory information. It utilizes multi-threading to improve performance when working with large numbers of files.
+**Fast** is a powerful, lightweight file management tool that allows users to efficiently copy, move, and delete files and directories. It also provides detailed information about files and directories, and supports multi-threading to speed up operations.
 
-## Features
-- **Copy/Move files and directories**: Recursively copy or move directories and files from one location to another.
-- **Delete files and directories**: Remove files and directories with ease.
-- **Directory and file information**: Get detailed information such as size, number of files, and last modified date.
-- **Single file operations**: Copy, move, or delete individual files.
-- **Buffer size control**: Set the buffer size for optimized file transfer.
-
-## Installation
-You need to have Python installed on your system. You can download Python from [python.org](https://www.python.org/downloads/).
 ## Download the Executable
 
-You can download the executable file for **Fast** here:
+For users who do not want to run the script manually, a pre-built executable is available for download:
 
-[Download Fast.exe](https://github.com/your-username/your-repo-name/raw/main/your-exe-file.exe)
-To install the required dependencies:
+[Download Fast.exe](https://github.com/your-username/your-repo-name/raw/main/fast.exe)
+
+## Features
+- **Fast file operations**: Copy, move, or delete multiple files and directories efficiently.
+- **Single file operations**: Handle individual file operations such as copy, move, or delete.
+- **Directory analysis**: Get detailed information such as size, number of files, and last modified time.
+- **Customizable buffer size**: Optimize file transfer speeds by adjusting the buffer size.
+- **Multi-threading support**: Perform file operations in parallel for better performance.
+
+## How to Use
+
+1. **Download** the `Fast.exe` file from the link above.
+2. Open a command prompt (CMD) or PowerShell.
+3. Navigate to the directory where `Fast.exe` is located.
+4. Run `Fast.exe` with the following syntax:
+
 ```bash
-pip install colorama
+fast <mode> <src> <dest> [buffer_size]
 ```
 
-## Usage
-To run the utility, use the command:
-
-```bash
-python fast.py <mode> <src> <dest> [buffer_size]
-```
-
-### Modes
-- `copy`: Copy all files and directories from source to destination.
-- `move`: Move all files and directories from source to destination.
-- `delete` or `remove`: Delete all files and directories in the source path.
+### Modes:
+- `copy`: Recursively copy files and directories from the source to the destination.
+- `move`: Move files and directories from the source to the destination.
+- `delete`: Delete all files and directories in the specified source path.
 - `copyfile`: Copy a single file from source to destination.
 - `movefile`: Move a single file from source to destination.
 - `deletefile`: Delete a single file.
 - `dirinfo`: Get detailed information about a directory (size, number of files, etc.).
-- `fileinfo`: Get detailed information about a single file (size, last modified, etc.).
-
-### Optional Arguments:
-- `buffer_size`: Set the buffer size for file copying/moving (default is 1024 bytes).
+- `fileinfo`: Get detailed information about a file (size, last modified, etc.).
 
 ### Examples
+
 1. **Copy a directory**:
    ```bash
-   python fast.py copy /path/to/source /path/to/destination
+   fast copy C:/source_directory D:/destination_directory
    ```
 
-2. **Move a single file**:
+2. **Move a file**:
    ```bash
-   python fast.py movefile /path/to/file.txt /path/to/destination
+   fast movefile C:/source/file.txt D:/destination/
    ```
 
 3. **Delete a directory**:
    ```bash
-   python fast.py delete /path/to/directory
+   fast delete C:/directory_to_delete
    ```
 
-4. **Get information about a directory**:
+4. **Get directory info**:
    ```bash
-   python fast.py dirinfo /path/to/directory
+   fast dirinfo C:/directory_to_analyze
    ```
 
-### Multi-threading
-This tool uses multi-threading to parallelize file operations for faster performance, especially when copying or moving large directories.
+### Custom Buffer Size
+You can adjust the buffer size to optimize performance (in bytes). By default, it uses 1024 bytes.
+
+For example, to use a 2048-byte buffer size for copying a directory:
+```bash
+fast copy C:/source_directory D:/destination_directory 2048
+```
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/your-username/your-repo-name/raw/main/LICENSE) file for details.
